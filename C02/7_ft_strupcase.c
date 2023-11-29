@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+char    *ft_strupcase(char *str){
+
+    int i;
+    i = 0;
+
+    while (str[i] != '\0'){
+        if (str[i] >= 'a' && str[i] <= 'z')
+            str[i] = str[i] - 32;
+        i++;
+    }
+    return str;
+}
+
+int main(){
+    char str[4] = "aa9a";
+    ft_strupcase(str);
+    int i = 0;
+    while (i < 4){
+        printf("%c", str[i]);
+        i++;
+    }
+    return 0;
+}
